@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Evaluare Nr2</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+h1 { color: #2c3e50; border-bottom: 3px solid #27ae60; padding-bottom: 10px; }
+h2 { color: #27ae60; margin-top: 30px; }
+.step { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #27ae60; }
+code { background: #2c3e50; color: #27ae60; padding: 8px 15px; display: block; border-radius: 5px; margin: 8px 0; font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>Evaluare Nr2 — Raport Git & GitHub</h1>
+<p><b>Nattalia903</b> · Colegiul Iulia Hasdeu · 22 Martie 2026</p>
+
+<h2>I. Commit</h2>
+<div class="step">1. Creat repository Evaluare-Nr2 pe GitHub</div>
+<div class="step">2. Adaugat index.ev.2.html<code>Add file → Create new file → index.ev.2.html</code></div>
+<div class="step">3. Clonat repository<code>git clone https://github.com/Nattalia903/Evaluare-Nr2.git</code></div>
+<div class="step">4. Creat settings.xml<code>touch settings.xml</code></div>
+<div class="step">5. Commit settings.xml<code>git add settings.xml && git commit -m "Commit file settings.xml"</code></div>
+<div class="step">6. Redenumit in configuration.xml<code>git mv settings.xml configuration.xml</code></div>
+<div class="step">7. Commit configuration.xml<code>git commit -m "Commit configuration.xml"</code></div>
+<div class="step">8. Amend comentariu<code>git commit --amend -m "Commit file configuration.xml"</code></div>
+<div class="step">9. Push<code>git push origin main</code></div>
+<div class="step">10. Verificare<code>git log --oneline</code></div>
+
+<h2>II. Commit</h2>
+<div class="step">1. Adaugat page1.html pe GitHub</div>
+<div class="step">2. Pull local<code>git pull origin main</code></div>
+<div class="step">3. Revenire la commit anterior<code>git reset --hard 1911fbc</code></div>
+<div class="step">4. Push fortat<code>git push origin main --force</code></div>
+<div class="step">5. Verificare<code>git log --oneline</code></div>
+
+<h2>I. Branch</h2>
+<div class="step">1. Creat branch stage<code>git checkout -b stage && git push origin stage</code></div>
+<div class="step">2. Creat hosts.xml<code>touch hosts.xml</code></div>
+<div class="step">3. Commit hosts.xml<code>git add hosts.xml && git commit -m "Commit file hosts.xml"</code></div>
+<div class="step">4. Actualizat local<code>git push origin stage</code></div>
+<div class="step">5. Merge in main<code>git checkout main && git merge stage && git push origin main</code></div>
+<div class="step">6. Verificare<code>git log --oneline --all --graph</code></div>
+
+<h2>II. Branch</h2>
+<div class="step">1. Creat branch dev din stage<code>git checkout stage && git checkout -b dev</code></div>
+<div class="step">2. Creat env.txt<code>touch env.txt</code></div>
+<div class="step">3. Commit env.txt<code>git add env.txt && git commit -m "Commit file env.txt"</code></div>
+<div class="step">4. Merge in stage<code>git checkout stage && git merge dev</code></div>
+<div class="step">5. Push<code>git push origin stage</code></div>
+<div class="step">6. Verificare<code>git log --oneline --all --graph</code></div>
+
+<h2>III. Branch</h2>
+<div class="step">1. Redenumit dev in develop<code>git branch -m dev develop</code></div>
+<div class="step">2. Push develop<code>git push origin develop</code></div>
+<div class="step">3. Verificare<code>git branch -a</code></div>
+</body>
+</html>
